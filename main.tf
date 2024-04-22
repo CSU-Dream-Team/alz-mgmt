@@ -55,6 +55,7 @@ custom_landing_zones = {
       archetype_config = {
         archetype_id   = "appteam1-sandbox"
         parameters     = {
+          listOfResourceTypesNotAllowed = ["Microsoft.Network/virtualNetworks"]
           effectDenyVnetPeering = "Audit"
           effectNotAllowedResources = "Audit"
         }

@@ -55,8 +55,6 @@ custom_landing_zones = {
       archetype_config = {
         archetype_id   = "appteam1-sandbox"
         parameters     = {
-          effectDenyVnetPeering = "Audit"
-          effectNotAllowedResources = "Audit"
         }
         access_control = {}
       }

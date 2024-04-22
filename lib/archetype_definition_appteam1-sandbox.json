@@ -1,31 +1,35 @@
 {
-    "customer_online": {
-      "policy_assignments": ["Deny-Resource-Locations", "Deny-RSG-Locations"],
+    "appteam1-sandbox": {
+      "policy_assignments": ["Enforce ALZ Sandbox Guardrails"],
       "policy_definitions": [],
       "policy_set_definitions": [],
       "role_definitions": [],
       "archetype_config": {
         "parameters": {
-          "Deny-Resource-Locations": {
-            "listOfAllowedLocations": [
-              "northeurope",
-              "westeurope",
-              "westus",
-              "northcentralus",
-              "southcentralus"
-            ]
-          },
-          "Deny-RSG-Locations": {
-            "listOfAllowedLocations": [
-              "northeurope",
-              "westeurope",
-              "westus",
-              "northcentralus",
-              "southcentralus"
+          "listOfResourceTypesNotAllowed":[
+                "microsoft.network/expressroutecircuits",
+                "microsoft.network/expressroutegateways",
+                "microsoft.network/expressrouteports",
+                "microsoft.network/virtualwans",
+                "microsoft.network/virtualhubs",
+                "microsoft.network/vpngateways",
+                "microsoft.network/p2svpngateways",
+                "microsoft.network/vpnsites",
+                "microsoft.network/virtualnetworkgateways"
+              ]
+          ,
+          "effectDenyVnetPeering": [
+              "Deny",
+              "Audit",
+              "Disabled"
+            ],
+          "effectNotAllowedResources": [
+              "Deny",
+              "Audit",
+              "Disabled"
             ]
           }
         },
         "access_control": {}
       }
-    }
-  }
+}

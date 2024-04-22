@@ -6,30 +6,32 @@
       "role_definitions": [],
       "archetype_config": {
         "parameters": {
-          "listOfResourceTypesNotAllowed":[
-                "microsoft.network/expressroutecircuits",
-                "microsoft.network/expressroutegateways",
-                "microsoft.network/expressrouteports",
-                "microsoft.network/virtualwans",
-                "microsoft.network/virtualhubs",
-                "microsoft.network/vpngateways",
-                "microsoft.network/p2svpngateways",
-                "microsoft.network/vpnsites",
-                "microsoft.network/virtualnetworkgateways"
-              ]
-          ,
-          "effectDenyVnetPeering": [
-              "Deny",
-              "Audit",
-              "Disabled"
-            ],
-          "effectNotAllowedResources": [
-              "Deny",
-              "Audit",
-              "Disabled"
-            ]
+          "enforce-alz-sandbox": {
+            "listOfResourceTypesNotAllowed":[
+                  "microsoft.network/expressroutecircuits",
+                  "microsoft.network/expressroutegateways",
+                  "microsoft.network/expressrouteports",
+                  "microsoft.network/virtualwans",
+                  "microsoft.network/virtualhubs",
+                  "microsoft.network/vpngateways",
+                  "microsoft.network/p2svpngateways",
+                  "microsoft.network/vpnsites",
+                  "microsoft.network/virtualnetworkgateways"
+                ],
+            "effectDenyVnetPeering": [
+                  "Deny",
+                  "Audit",
+                  "Disabled"
+                ],          
+            "effectNotAllowedResources": [
+                  "Deny",
+                  "Audit",
+                  "Disabled"
+                ]            
           }
-        },
+
+      }
+     },
         "access_control": {}
       }
 }

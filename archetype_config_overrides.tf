@@ -3,7 +3,7 @@ locals {
     sandboxes = {
       appteam1-sandbox = {
         enforcement_mode = {
-          enforce-alz-sandbox  = false
+          Enforce-Alz-Sandbox  = false
         }
       }
     }
